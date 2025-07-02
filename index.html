@@ -7,11 +7,16 @@
     body {
       font-family: Arial, sans-serif;
       text-align: center;
-      padding-top: 100px;
+      padding-top: 50px;
     }
     #timer {
       font-size: 48px;
       color: #333;
+    }
+    img {
+      margin-top: 20px;
+      width: 300px;
+      border-radius: 8px;
     }
   </style>
 </head>
@@ -19,10 +24,14 @@
   <h1>Anda akan dialihkan dalam:</h1>
   <div id="timer">30</div>
 
+  <img src="foto1.jpg" alt="Foto 1">
+  <img src="foto2.jpg" alt="Foto 2">
+
   <script>
     let timeLeft = 30;
     const timerElement = document.getElementById("timer");
-    const redirectURL = "https://sites.google.com/view/itudiaa?usp=sharing"; 
+    const redirectURL = "https://sites.google.com/view/halaman-saya"; // GANTI sesuai tujuan
+
     const countdown = setInterval(() => {
       timeLeft--;
       timerElement.textContent = timeLeft;
