@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Timer 30 Detik</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #timer {
+      font-size: 48px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Anda akan dialihkan dalam:</h1>
+  <div id="timer">30</div>
+
+  <script>
+    let timeLeft = 30;
+    const timerElement = document.getElementById("timer");
+    const redirectURL = "https://sites.google.com/view/itudiaa/halaman-muka"; 
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      timerElement.textContent = timeLeft;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        window.location.href = redirectURL;
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
